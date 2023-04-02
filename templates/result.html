@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <img src="{{ img_path }}" width="300" height="300">
+    <p>Predicted class: {{ result.class_name }}</p>
+    <form action="{{ url_for('home') }}">
+        <input type="submit" value="Back">
+    </form>
+</body>
+</html>
