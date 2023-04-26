@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Shield</title>
+  </head>
+  <body class="bg-[#274B36]">
+    <div class="p-10">
+      {% include 'navbar.html' %}
+      <div class="ml-4 text-white">
+        <h1>Prediction Result</h1>
+        <img src="{{ img_path }}" width="300" height="300" />
+        <p class="capitalize">Predicted class: {{ result.class_name }}</p>
+        <div id="plant-info"></div>
+      </div>
+    </div>
+    <script>
+      const plantData = [
+        {
+          name: "abrus precatorius",
+          activity: "Neurotoxic",
+          locations: ["Southern India", "Eastern India"],
+          poisonLevel: "High",
+          consumptionInfo: "Eating even one seed can be lethal to humans.",
+        },
+        {
+          name: "madagascar periwinkle",
+          activity: "Cytotoxic",
+          locations: ["Throughout India"],
+          poisonLevel: "Low",
+          consumptionInfo:
+            "Eating the plant can cause vomiting, diarrhea, and stomach pain.",
+        },
+        {
+          name: "castor oil plant",
+          activity: "Cytotoxic, Ricin toxin",
+          locations: ["Throughout India"],
+          poisonLevel: "High",
+          consumptionInfo:
+            "Eating the seeds can cause severe abdominal pain, vomiting, and diarrhea.",
+        },
+        {
+          name: "dieffenbachia",
+          activity: "Irritant",
+          locations: ["Throughout India"],
+          poisonLevel: "Low",
+          consumptionInfo:
+            "Chewing the leaves can cause swelling and burning of the mouth and throat.",
+        },
+        {
+          name: "fox glove",
+          activity: "Cardiac glycosides",
+          locations: ["Himalayan region, Western Ghats"],
+          poisonLevel: "High",
+          consumptionInfo:
+            "Eating the leaves or seeds can cause irregular heartbeat and death.",
+        },
+        {
+          name: "lilies",
+          activity: "Nephrotoxic",
+          locations: ["Throughout India"],
+          poisonLevel: "High",
+          consumptionInfo:
+            "Ingesting the plant can cause kidney damage in cats.",
+        },
+        {
+          name: "lily of the valley",
+          activity: "Cardiac glycosides",
+          locations: ["Himalayan region, Western Ghats"],
+          poisonLevel: "High",
+          consumptionInfo:
+            "Eating the leaves or flowers can cause irregular heartbeat, seizures, and death.",
+        },
+        {
+          name: "oleander",
+          activity: "Cardiac glycosides",
+          locations: ["Throughout India"],
+          poisonLevel: "High",
+          consumptionInfo:
+            "Ingesting any part of the plant can cause nausea, vomiting, and irregular heartbeat.",
+        },
+        {
+          name: "pothos",
+          activity: "Irritant",
+          locations: ["Throughout India"],
+          poisonLevel: "Low",
+          consumptionInfo:
+            "Chewing the leaves can cause swelling and burning of the mouth and throat.",
+        },
+        {
+          name: "rhubarb",
+          activity: "Oxalates",
+          locations: ["Throughout India"],
+          poisonLevel: "Low",
+          consumptionInfo:
+            "Eating large amounts of leaves can cause kidney damage.",
+        },
+        {
+          name: "wisteria",
+          activity: "Neurotoxic",
+          locations: ["Himalayan region, Western Ghats"],
+          poisonLevel: "High",
+          consumptionInfo:
+            "Ingesting the seeds or pods can cause vomiting, diarrhea, and confusion.",
+        },
+      ];
+      const predictedClass = "{{ result.class_name }}";
+
+      let plantInfo = "";
+
+      plantData.forEach(function (plant) {
+        if (plant.name === predictedClass) {
+          plantInfo = `
+              
+            <p>Activity: ${plant.activity}</p>
+            <p>Locations: ${plant.locations.join(", ")}</p>
+            <p>Poison Level: ${plant.poisonLevel}</p>
+            <p>Consumption Information: ${plant.consumptionInfo}</p>
+          `;
+        }
+      });
+
+      if (plantInfo === "") {
+        plantInfo = "<p>No plant information found.</p>";
+      }
+      document.getElementById("plant-info").innerHTML = plantInfo;
+    </script>
+  </body>
+</html>

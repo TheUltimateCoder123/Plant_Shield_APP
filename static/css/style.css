@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 998;
+} */
+
+/* .navbar .logo {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 15px;
+  margin-left: 20px;
+} */
+
+/* .navbar .navbar-links {
+  display: inline-block;
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} */
+
+.navbar .navbar-links li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+/* .navbar .navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+} */
+
+.navbar .toggle-button {
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar .toggle-button .bar:nth-child(2) {
+  width: 20px;
+}
+
+.navbar .toggle-button .bar:nth-child(3) {
+  width: 15px;
+}
+
+.navbar .toggle-button.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar .toggle-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar .toggle-button.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
+.form-container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.form-container input[type="file"] {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.form-container input[type="submit"] {
+  background-color: #00ffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.form-container input[type="submit"]:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
