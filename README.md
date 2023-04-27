@@ -13,7 +13,7 @@ Go to directory and install
 #### `pip install -r requirements.txt`
 #### `python app.py`
 
-SCREEN SHOTS
+# SCREEN SHOTS
 ![Screenshot (812)](https://user-images.githubusercontent.com/73277254/234773827-b72ab8dc-3972-406d-a88e-53f0cc6a2a2e.png)
 ![Screenshot (815)](https://user-images.githubusercontent.com/73277254/234773847-6dcba0fb-26b7-4857-972f-918d2c39ab1e.png)
 ![Screenshot (813)](https://user-images.githubusercontent.com/73277254/234773854-9dd09ed3-ee56-46ce-a882-7d85837a28ac.png)
