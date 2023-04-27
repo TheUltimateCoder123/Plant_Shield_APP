@@ -10,8 +10,9 @@ This is web app mainly based on Plants that are found in Karnataka region.
 
 # HOW TO RUN APPLICATION
 #### git clone https://github.com/TheUltimateCoder123/HAZARDOUS_PLANT_RECOGNITION/tree/master.git
-Then, go to directory and install
+### Then, go to directory and install requirements.txt file
 #### `pip install -r requirements.txt`
+### Finally run application
 #### `python app.py`
 
 # SCREEN SHOTS
